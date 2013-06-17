@@ -5,8 +5,8 @@ $(document).ready(function() {
   	var uno3  = Math.floor((Math.random()*10)+1);
 
   	var dos1  = Math.floor((Math.random()*10)+1);
-	  	var dos2  = Math.floor((Math.random()*10)+1);
-	  	var dos3  = Math.floor((Math.random()*10)+1);
+	var dos2  = Math.floor((Math.random()*10)+1);
+	var dos3  = Math.floor((Math.random()*10)+1);
 
   	var tres1 = Math.floor((Math.random()*10)+1);
   	var tres2 = Math.floor((Math.random()*10)+1);
