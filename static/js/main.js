@@ -62,10 +62,17 @@ $(document).ready(function() {
 		     } else {		     	
 		          clearInterval(varName3);
 		     }
-		};					
-		setInterval(varName1, 100);
-		setInterval(varName2, 100);
-		setInterval(varName3, 100);
+		};				
+
+		if($("#pushblock1").is(':checked')) {  
+			setInterval(varName1, 100);
+        }	
+		if($("#pushblock2").is(':checked')) {  
+			setInterval(varName2, 100);
+        }	
+		if($("#pushblock3").is(':checked')) {  
+			setInterval(varName3, 100);
+        }	        
 	});
 
 
