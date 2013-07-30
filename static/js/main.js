@@ -74,7 +74,6 @@ $(document).ready(function() {
 		if($("#pushblock3").is(':checked')) {  
 			setInterval(varName3, 100);
         }	
-        return false;
 	});
 
 
@@ -82,21 +81,18 @@ $(document).ready(function() {
 	  	var uno1  = Math.floor((Math.random()*10)+1);
 	  	$('.slot1').prepend('<img height=120 src="static/images/casino/'+uno1+'.png">')
 	  	$(".slot1 img:last-child").remove()
-	  	event.preventDefault();
 	});
 
 	$("#push2").click(function() {
 	  	var uno1  = Math.floor((Math.random()*10)+1);
 	  	$('.slot2').prepend('<img height=120 src="static/images/casino/'+uno1+'.png">')
-	  	$(".slot2 img:last-child").remove()		
-	  	event.preventDefault();	  	
+	  	$(".slot2 img:last-child").remove()			
 	});
 
 	$("#push3").click(function() {
 	  	var uno1  = Math.floor((Math.random()*10)+1);
 	  	$('.slot3').prepend('<img height=120 src="static/images/casino/'+uno1+'.png">')
-	  	$(".slot3 img:last-child").remove()		
-	  	event.preventDefault();			  	
+	  	$(".slot3 img:last-child").remove()				  	
 	});
 
 });
