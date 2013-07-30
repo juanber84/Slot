@@ -13,27 +13,28 @@ $(document).ready(function() {
   	var tres3 = Math.floor((Math.random()*10)+1);					  						  	
 
 
-  	$('.slot1').append('<img src="static/images/casino/'+uno1+'.png">')	
-  	$('.slot1').append('<img src="static/images/casino/'+uno2+'.png">')
-  	$('.slot1').append('<img src="static/images/casino/'+uno3+'.png">')	
+  	$('.slot1').append('<img height=120 src="static/images/casino/'+uno1+'.png">')	
+  	$('.slot1').append('<img height=120 src="static/images/casino/'+uno2+'.png">')
+  	$('.slot1').append('<img height=120 src="static/images/casino/'+uno3+'.png">')	
 
-  	$('.slot2').append('<img src="static/images/casino/'+dos1+'.png">')	
-  	$('.slot2').append('<img src="static/images/casino/'+dos2+'.png">')	
-  	$('.slot2').append('<img src="static/images/casino/'+dos3+'.png">')	
+  	$('.slot2').append('<img height=120 src="static/images/casino/'+dos1+'.png">')	
+  	$('.slot2').append('<img height=120 src="static/images/casino/'+dos2+'.png">')	
+  	$('.slot2').append('<img height=120 src="static/images/casino/'+dos3+'.png">')	
 
-  	$('.slot3').append('<img src="static/images/casino/'+tres1+'.png">')	
-  	$('.slot3').append('<img src="static/images/casino/'+tres2+'.png">')	
-  	$('.slot3').append('<img src="static/images/casino/'+tres3+'.png">')											  						  	
+  	$('.slot3').append('<img height=120 src="static/images/casino/'+tres1+'.png">')	
+  	$('.slot3').append('<img height=120 src="static/images/casino/'+tres2+'.png">')	
+  	$('.slot3').append('<img height=120 src="static/images/casino/'+tres3+'.png">')											  						  	
 	var cont = 0; 
 
 	
 	$("#push").click(function() {
+
 		var varCounter = 0;
 		var varName1 = function(){
 		     if(varCounter <= 20) {
 		        varCounter++;
 		        var uno1  = Math.floor((Math.random()*10)+1);
-				$('.slot1').prepend('<img src="static/images/casino/'+uno1+'.png">')
+				$('.slot1').prepend('<img height=120 src="static/images/casino/'+uno1+'.png">')
 			  	$(".slot1 img:last-child").remove()
 		     } else {
 		         clearInterval(varName1);
@@ -45,7 +46,7 @@ $(document).ready(function() {
 		     if(varCounter2 <= 25) {
 		        varCounter2++;
 		        var dos1  = Math.floor((Math.random()*10)+1);
-				$('.slot2').prepend('<img src="static/images/casino/'+dos1+'.png">')
+				$('.slot2').prepend('<img height=120 src="static/images/casino/'+dos1+'.png">')
 			  	$(".slot2 img:last-child").remove()
 		     } else {
 
@@ -57,7 +58,7 @@ $(document).ready(function() {
 		     if(varCounter3 <= 30) {
 		        varCounter3++;
 		        var tres1  = Math.floor((Math.random()*10)+1);
-				$('.slot3').prepend('<img src="static/images/casino/'+tres1+'.png">')
+				$('.slot3').prepend('<img height=120 src="static/images/casino/'+tres1+'.png">')
 			  	$(".slot3 img:last-child").remove()
 		     } else {		     	
 		          clearInterval(varName3);
@@ -72,26 +73,30 @@ $(document).ready(function() {
         }	
 		if($("#pushblock3").is(':checked')) {  
 			setInterval(varName3, 100);
-        }	        
+        }	
+        return false;
 	});
 
 
 	$("#push1").click(function() {
 	  	var uno1  = Math.floor((Math.random()*10)+1);
-	  	$('.slot1').prepend('<img src="static/images/casino/'+uno1+'.png">')
+	  	$('.slot1').prepend('<img height=120 src="static/images/casino/'+uno1+'.png">')
 	  	$(".slot1 img:last-child").remove()
+	  	event.preventDefault();
 	});
 
 	$("#push2").click(function() {
 	  	var uno1  = Math.floor((Math.random()*10)+1);
-	  	$('.slot2').prepend('<img src="static/images/casino/'+uno1+'.png">')
-	  	$(".slot2 img:last-child").remove()			  	
+	  	$('.slot2').prepend('<img height=120 src="static/images/casino/'+uno1+'.png">')
+	  	$(".slot2 img:last-child").remove()		
+	  	event.preventDefault();	  	
 	});
 
 	$("#push3").click(function() {
 	  	var uno1  = Math.floor((Math.random()*10)+1);
-	  	$('.slot3').prepend('<img src="static/images/casino/'+uno1+'.png">')
-	  	$(".slot3 img:last-child").remove()					  	
+	  	$('.slot3').prepend('<img height=120 src="static/images/casino/'+uno1+'.png">')
+	  	$(".slot3 img:last-child").remove()		
+	  	event.preventDefault();			  	
 	});
 
 });
